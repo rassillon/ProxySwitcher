@@ -5,6 +5,9 @@
         /// <summary>
         /// Variable del diseñador requerida.
         /// </summary>
+
+        static ProxyManager p;
+
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -111,7 +114,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(248, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Edit Proxy Configuration";
+            this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox2
@@ -149,7 +152,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(97, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "proxy.wifi.uma.es";
+            this.textBox1.Text = "proxy.wifi.uma.es:3128";
             // 
             // Form1
             // 
@@ -160,7 +163,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ProxySwitcher";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
