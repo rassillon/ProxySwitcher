@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,6 +56,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "ENABLE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -64,6 +66,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "DISABLE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -103,9 +106,9 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(12, 126);
+            this.panel3.Location = new System.Drawing.Point(12, 115);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 59);
+            this.panel3.Size = new System.Drawing.Size(260, 61);
             this.panel3.TabIndex = 5;
             // 
             // button3
@@ -116,16 +119,15 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(201, 3);
             this.textBox2.MaxLength = 65535;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(38, 20);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "65535";
             // 
             // label3
             // 
@@ -147,29 +149,39 @@
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(63, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(97, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "proxy.wifi.uma.es:3128";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "label4";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 198);
+            this.ClientSize = new System.Drawing.Size(284, 202);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "ProxySwitcher";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,6 +198,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
 
     }
 }
